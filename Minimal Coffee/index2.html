@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coffee Catcher</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color:#483434 ;
+      }
+      canvas {
+        background-color: #f9f1e9;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+
+    <script>
+      // Setup canvas
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+
+      // Cup variables
+      const cupWidth = 100;
+      const cupHeight = 100;
+      let cupX = canvas.width / 2 - cupWidth / 2;
+      const cupY = canvas.height - cupHeight;
+      const cupSpeed = 10;
+
+      // Bean variables
+      const beanRadius = 10;
+      let beans = [];
+      let beanSpeed = 1;
+      let score = 0;
+
+      function drawCup() {
+        ctx.fillStyle = '#5f4e42';
+        ctx.fillRect(cupX, cupY, cupWidth, cupHeight);
+      }
+
+      function moveCup(e) {
+        if (e.keyCode === 37) {
+          cupX -= cupSpeed;
+        } else if (e.keyCode === 39) {
+          cupX += cupSpeed;
+        }
+      }
+
+      function drawBean() {
+        ctx.fillStyle = '#b35d20';
+        for (let i = 0; i < beans.length; i++) {
+          ctx.beginPath();
+          ctx.arc(beans[i].x, beans[i].y, beanRadius, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.fill();
+        }
+      }
+
+      function moveBeans() {
+        for (let i = 0; i < beans.length; i++) {
+          beans[i].y += beanSpeed;
+          if (
+            beans[i].y + beanRadius > cupY &&
+            beans[i].x + beanRadius > cupX &&
+            beans[i].x - beanRadius < cupX + cupWidth
+          ) {
+            beans.splice(i, 1);
+            score++;
+          }
+        }
+      }
+
+      function updateScore() {
+        ctx.font = '20px Arial';
+        ctx.fillStyle = '#5f4e42';
+        ctx.fillText('Score: ' + score, 10, 30);
+      }
+
+      function gameLoop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawCup();
+        drawBean();
+        moveBeans();
+        updateScore();
+        requestAnimationFrame(gameLoop);
+      }
+
+      window.addEventListener('keydown', moveCup);
+
+      function randomIntFromInterval(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      setInterval(() => {
+        beans.push({
+          x: randomIntFromInterval(10, canvas.width - 10),
+          y: -beanRadius,
+        });
+        if (beanSpeed < 5) {
+          beanSpeed += 0.2;
+        }
+      }, 1000);
+
+      gameLoop();
+    </script>
+  </body>
+</html>
