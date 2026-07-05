@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Molten Lava */
+        --color-molten-lava-50: #ffe5e5;
+        --color-molten-lava-100: #ffcccc;
+        --color-molten-lava-200: #ff9999;
+        --color-molten-lava-300: #ff6666;
+        --color-molten-lava-400: #ff3333;
+        --color-molten-lava-500: #ff0000;
+        --color-molten-lava-600: #cc0000;
+        --color-molten-lava-700: #990000;
+        --color-molten-lava-800: #660000;
+        --color-molten-lava-900: #330000;
+        --color-molten-lava-950: #240000;
+
+        /* Brick Red */
+        --color-brick-red-50: #fde8e9;
+        --color-brick-red-100: #fbd0d3;
+        --color-brick-red-200: #f6a2a7;
+        --color-brick-red-300: #f2737b;
+        --color-brick-red-400: #ee4450;
+        --color-brick-red-500: #e91624;
+        --color-brick-red-600: #bb111d;
+        --color-brick-red-700: #8c0d15;
+        --color-brick-red-800: #5d090e;
+        --color-brick-red-900: #2f0407;
+        --color-brick-red-950: #210305;
+
+        /* Papaya Whip */
+        --color-papaya-whip-50: #fef6e7;
+        --color-papaya-whip-100: #fdedce;
+        --color-papaya-whip-200: #fadb9e;
+        --color-papaya-whip-300: #f8ca6d;
+        --color-papaya-whip-400: #f6b83c;
+        --color-papaya-whip-500: #f4a60b;
+        --color-papaya-whip-600: #c38509;
+        --color-papaya-whip-700: #926407;
+        --color-papaya-whip-800: #614205;
+        --color-papaya-whip-900: #312102;
+        --color-papaya-whip-950: #221702;
+
+        /* Deep Space Blue */
+        --color-deep-space-blue-50: #e5f6ff;
+        --color-deep-space-blue-100: #ccedff;
+        --color-deep-space-blue-200: #99dbff;
+        --color-deep-space-blue-300: #66c9ff;
+        --color-deep-space-blue-400: #33b8ff;
+        --color-deep-space-blue-500: #00a6ff;
+        --color-deep-space-blue-600: #0085cc;
+        --color-deep-space-blue-700: #006399;
+        --color-deep-space-blue-800: #004266;
+        --color-deep-space-blue-900: #002133;
+        --color-deep-space-blue-950: #001724;
+
+        /* Steel Blue */
+        --color-steel-blue-50: #edf3f7;
+        --color-steel-blue-100: #dce8ef;
+        --color-steel-blue-200: #b8d1e0;
+        --color-steel-blue-300: #95b9d0;
+        --color-steel-blue-400: #71a2c1;
+        --color-steel-blue-500: #4e8bb1;
+        --color-steel-blue-600: #3e6f8e;
+        --color-steel-blue-700: #2f536a;
+        --color-steel-blue-800: #1f3847;
+        --color-steel-blue-900: #101c23;
+        --color-steel-blue-950: #0b1319;
+
+        /* Fonts */
+        --font-poppins: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-papaya-whip-50 font-poppins h-screen">
+    <header class="fixed top-5 left-1/2 -translate-x-1/2 z-50">
+      <nav
+        id="navbar"
+        class="relative flex items-center justify-center w-[480px] h-20 rounded-2xl border border-white/20 bg-deep-space-blue-700/40 backdrop-blur-xl shadow-2xl overflow-hidden"
+      >
+        <div
+          id="navLinks"
+          class="flex items-center justify-center gap-8 text-white"
+        >
+          <a
+            href="#main"
+            class="nav-link font-semibold hover:text-deep-space-blue-400 transition"
+            >Main</a
+          >
+
+          <a
+            href="#profile"
+            class="nav-link font-semibold hover:text-deep-space-blue-400 transition"
+            >Introduction</a
+          >
+
+          <a
+            href="#skills"
+            class="nav-link font-semibold hover:text-deep-space-blue-400 transition"
+            >Skills</a
+          >
+
+          <a
+            href="#about"
+            class="nav-link font-semibold hover:text-deep-space-blue-400 transition"
+            >About</a
+          >
+        </div>
+
+        <button
+          id="menu"
+          class="absolute opacity-0 scale-0 w-14 h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex flex-col justify-center items-center gap-1 cursor-pointer"
+        >
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+      </nav>
+    </header>
+    <section class="relative top-30 px-30">
+      <div class="flex justify-center items-start">
+        <div class="flex flex-col justify-start items-start gap-10">
+          <h3
+            id="hero-title"
+            class="whitespace-pre-line text-5xl text-brick-red-950 font-bold w-1/2"
+          >
+            Unleash Your Creativity whit Top
+            <span class="text-deep-space-blue-500">UI Designes</span>
+          </h3>
+          <p class="w-1/2 text-brick-red-950" id="hero-text">
+            Elevate your designs as I am using new andupdated skills and
+            technologies to build brilliant , dynamic and useful websites
+            Elevate your designs as I am using new andupdated skills and
+            technologies to build brilliant , dynamic and useful websites
+          </p>
+          <div
+            class="grid grid-cols-3 gap-10 text-brick-red-950 relative right-6"
+            id="hero-stats"
+          >
+            <p class="flex flex-col justify-center items-center">
+              <span class="text-xl mr-3 font-bold">100+</span>
+              <span class="uppercase text-xs">Projects</span>
+            </p>
+            <p class="flex flex-col justify-center">
+              <span class="text-xl font-bold">50+</span>
+              <span class="uppercase text-xs">Real-Life Examples</span>
+            </p>
+            <p class="flex flex-col justify-center">
+              <span class="text-xl text-deep-space-blue-500 font-bold"
+                >1000+</span
+              >
+              <span class="uppercase text-xs">Hours of Coding</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <img
+            id="hero-image"
+            class="rounded-md w-[90rem]"
+            src="Images/portrait.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      id="portfolio"
+      class="relative top-70 h-screen overflow-hidden bg-steel-blue-950"
+    >
+      <div
+        id="portfolio-track"
+        class="flex gap-12 h-full items-center px-20 w-max"
+      >
+        <!-- Card 1 -->
+        <article
+          class="w-[720px] h-[450px] rounded-3xl overflow-hidden bg-papaya-whip-50 grid grid-cols-2 flex-shrink-0 shadow-2xl"
+        >
+          <div class="p-10 flex flex-col justify-between">
+            <div>
+              <span
+                class="text-deep-space-blue-500 font-semibold uppercase tracking-widest"
+              >
+                Landing Page
+              </span>
+
+              <h2 class="text-4xl font-bold text-brick-red-950 mt-3">
+                Creative Design Studio
+              </h2>
+
+              <p class="mt-5 text-steel-blue-800">
+                A premium landing page focused on modern UI, fluid animations
+                and glassmorphism built with TailwindCSS and GSAP.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="px-3 py-1 rounded-full bg-deep-space-blue-100"
+                >HTML</span
+              >
+              <span class="px-3 py-1 rounded-full bg-deep-space-blue-100"
+                >Tailwind</span
+              >
+              <span class="px-3 py-1 rounded-full bg-deep-space-blue-100"
+                >GSAP</span
+              >
+            </div>
+          </div>
+
+          <img src="Images/artexample.png" class="w-full h-full object-cover" />
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="w-[720px] h-[450px] rounded-3xl overflow-hidden bg-brick-red-950 text-white grid grid-cols-2 flex-shrink-0 shadow-2xl"
+        >
+          <div class="p-10 flex flex-col justify-between">
+            <div>
+              <span class="uppercase tracking-widest text-papaya-whip-300">
+                Dashboard
+              </span>
+
+              <h2 class="text-4xl font-bold mt-3">Analytics Platform</h2>
+
+              <p class="mt-5 text-white/70">
+                Interactive dashboard with reusable components and beautiful
+                charts.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="px-3 py-1 rounded-full bg-white/10">JavaScript</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Chart.js</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Tailwind</span>
+            </div>
+          </div>
+
+          <img src="Images/chart.png" class="w-full h-full object-cover" />
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="w-[720px] h-[450px] rounded-3xl overflow-hidden bg-deep-space-blue-900 text-white grid grid-cols-2 flex-shrink-0 shadow-2xl"
+        >
+          <div class="p-10 flex flex-col justify-between">
+            <div>
+              <span class="uppercase tracking-widest text-papaya-whip-300">
+                E-Commerce
+              </span>
+
+              <h2 class="text-4xl font-bold mt-3">Fashion Boutique</h2>
+
+              <p class="mt-5 text-white/70">
+                Responsive online store with premium animations and
+                interactions.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="px-3 py-1 rounded-full bg-white/10">GSAP</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Tailwind</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">JavaScript</span>
+            </div>
+          </div>
+
+          <img src="Images/nikeshoes.png" class="w-full h-full object-cover" />
+        </article>
+
+        <!-- Card 4 -->
+        <article
+          class="w-[720px] h-[450px] rounded-3xl overflow-hidden bg-steel-blue-900 text-white grid grid-cols-2 flex-shrink-0 shadow-2xl"
+        >
+          <div class="p-10 flex flex-col justify-between">
+            <div>
+              <span class="uppercase tracking-widest text-papaya-whip-300">
+                Portfolio
+              </span>
+
+              <h2 class="text-4xl font-bold mt-3">Personal Branding</h2>
+
+              <p class="mt-5 text-white/70">
+                Modern developer portfolio using GSAP, ScrollTrigger and
+                Tailwind.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="px-3 py-1 rounded-full bg-white/10">HTML</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Tailwind</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">GSAP</span>
+            </div>
+          </div>
+
+          <img src="Images/portfolio.png" class="w-full h-full object-cover" />
+        </article>
+      </div>
+    </section>
+    <section
+      id="skills"
+      class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-papaya-whip-50 py-32"
+    >
+      <h2 class="text-5xl font-bold text-brick-red-950 mb-24">My Tech Stack</h2>
+
+      <div class="relative w-full h-[650px]">
+        <!-- HTML -->
+        <div
+          class="skill-bubble absolute top-12 left-[12%] w-28 h-28 rounded-full bg-molten-lava-800 shadow-2xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-html5 text-[60px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- CSS -->
+        <div
+          class="skill-bubble absolute top-48 left-[30%] w-24 h-24 rounded-full bg-molten-lava-800 shadow-xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-css3-alt text-[50px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- JavaScript -->
+        <div
+          class="skill-bubble absolute top-24 right-[22%] w-32 h-32 rounded-full bg-molten-lava-800 shadow-2xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-js text-[60px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- Tailwind -->
+        <div
+          class="skill-bubble absolute top-[55%] left-[8%] w-32 h-32 rounded-full bg-molten-lava-800 shadow-2xl flex items-center justify-center"
+        >
+          <i class="fa-solid fa-wind text-[55px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- React -->
+        <div
+          class="skill-bubble absolute top-[58%] left-[40%] w-36 h-36 rounded-full bg-molten-lava-800 shadow-2xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-react text-[72px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- Git -->
+        <div
+          class="skill-bubble absolute top-[18%] right-[5%] w-24 h-24 rounded-full bg-molten-lava-800 shadow-xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-git-alt text-[48px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- GitHub -->
+        <div
+          class="skill-bubble absolute bottom-[15%] right-[18%] w-32 h-32 rounded-full bg-molten-lava-800 shadow-2xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-github text-[65px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- Figma -->
+        <div
+          class="skill-bubble absolute bottom-[10%] left-[25%] w-24 h-24 rounded-full bg-molten-lava-800 shadow-xl flex items-center justify-center"
+        >
+          <i class="fa-brands fa-figma text-[48px] text-molten-lava-200"></i>
+        </div>
+
+        <!-- VS Code -->
+        <div
+          class="skill-bubble absolute bottom-[28%] right-[40%] w-28 h-28 rounded-full bg-molten-lava-800 shadow-xl flex items-center justify-center"
+        >
+          <i class="fa-solid fa-code text-[55px] text-molten-lava-200"></i>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="relative mt-32 border-t border-white/10 bg-deep-space-blue-700/40 backdrop-blur-xl"
+    >
+      <div class="max-w-7xl mx-auto px-10 py-16">
+        <div class="grid md:grid-cols-3 gap-16">
+          <!-- Left -->
+          <div>
+            <h2 class="text-3xl font-bold text-brick-red-950">
+              Sadra <span class="text-molten-lava-800">Sedigh</span>
+            </h2>
+
+            <p class="mt-5 text-papaya-whip-50/80 leading-8">
+              Frontend developer passionate about creating elegant, interactive
+              and responsive digital experiences using HTML, Tailwind CSS,
+              JavaScript and GSAP.
+            </p>
+          </div>
+
+          <!-- Center -->
+          <div>
+            <h3 class="text-xl font-semibold text-brick-red-950 mb-6">
+              Navigation
+            </h3>
+
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#hero"
+                  class="text-papaya-whip-50/80 hover:text-molten-lava-800 transition"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#skills"
+                  class="text-papaya-whip-50/80 hover:text-molten-lava-800 transition"
+                >
+                  Skills
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#portfolio"
+                  class="text-papaya-whip-50/80 hover:text-molten-lava-800 transition"
+                >
+                  Portfolio
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#contact"
+                  class="text-papaya-whip-50/80 hover:text-molten-lava-800 transition"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right -->
+          <div>
+            <h3 class="text-xl font-semibold text-papaya-whip-50 mb-6">
+              Let's Connect
+            </h3>
+
+            <div class="flex gap-5 text-3xl">
+              <a
+                href="#"
+                class="text-brick-red-950 hover:text-molten-lava-800 transition duration-300"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="text-brick-red-950 hover:text-molten-lava-800 transition duration-300"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a
+                href="#"
+                class="text-brick-red-950 hover:text-molten-lava-800 transition duration-300"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a
+                href="#"
+                class="text-brick-red-950 hover:text-molten-lava-800 transition duration-300"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+
+            <div class="mt-8 space-y-2">
+              <p class="text-papaya-whip-50/80">📧 sadrasedigh679@gmail.com</p>
+
+              <p class="text-papaya-whip-50/80">📱 +98 912 809 6297</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full h-px bg-white/10 my-12"></div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-papaya-whip-50/60">
+            © 2026 Sadra Sedigh. All rights reserved.
+          </p>
+
+          <p class="text-papaya-whip-50/60 mt-4 md:mt-0">
+            Designed & Developed with
+            <span class="text-molten-lava-800">❤</span>
+            using Tailwind CSS & GSAP
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
