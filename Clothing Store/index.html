@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothing</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #ffffff;
+        --color-secondary: #e8e8e8;
+        --color-accent: #460515;
+      }
+      @layer components {
+        .btn {
+          @apply py-2 px-4 rounded-sm bg-accent text-[1.20] font-bold cursor-pointer bg-accent text-white;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-primary text-black">
+    <!-- ================= NAVBAR ================= -->
+
+    <nav
+      class="sticky top-5 z-50 mx-auto mt-4 flex w-[95%] max-w-7xl items-center justify-between rounded-2xl border border-black/5 bg-white/80 px-8 py-5 shadow-xl backdrop-blur-xl"
+    >
+      <p
+        id="typewriter"
+        dir="rtl"
+        class="w-44 overflow-hidden whitespace-nowrap text-3xl font-black tracking-wide"
+      ></p>
+
+      <div class="flex gap-10 text-lg font-semibold">
+        <a
+          href="#"
+          class="relative transition hover:text-accent after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+        >
+          خانه
+        </a>
+
+        <a
+          href="#products"
+          class="relative transition hover:text-accent after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+        >
+          محصولات
+        </a>
+
+        <a
+          href="#about"
+          class="relative transition hover:text-accent after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+        >
+          درباره ما
+        </a>
+
+        <a
+          href="#contact"
+          class="relative transition hover:text-accent after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+        >
+          تماس
+        </a>
+      </div>
+
+      <div class="flex gap-4">
+        <button
+          class="rounded-xl bg-accent px-5 py-2.5 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        >
+          ثبت نام
+        </button>
+
+        <button
+          class="rounded-xl border border-accent px-5 py-2.5 font-semibold text-accent transition hover:bg-accent hover:text-white"
+        >
+          سبد خرید
+        </button>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section
+      class="mx-auto mt-20 grid max-w-7xl items-center gap-20 px-8 lg:grid-cols-2"
+    >
+      <!-- Text -->
+
+      <div class="space-y-8">
+        <span
+          class="rounded-full bg-accent/10 px-4 py-2 text-sm font-bold text-accent"
+        >
+          ✦ کالکشن جدید پاییز و زمستان
+        </span>
+
+        <h1 class="text-6xl font-black leading-tight">
+          استایل خاص
+          <br />
+
+          برای هر سلیقه
+        </h1>
+
+        <p
+          id="typewriter2"
+          class="max-w-xl text-lg leading-10 text-black/60"
+        ></p>
+
+        <div class="flex gap-5">
+          <button
+            class="rounded-xl bg-accent px-8 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+          >
+            مشاهده محصولات
+          </button>
+
+          <button
+            class="rounded-xl border border-accent px-8 py-4 font-bold transition hover:bg-accent hover:text-white"
+          >
+            درباره ما
+          </button>
+        </div>
+
+        <!-- Stats -->
+
+        <div class="mt-10 flex gap-16">
+          <div>
+            <h2 class="text-4xl font-black text-accent">+500</h2>
+
+            <p class="text-black/50">محصول</p>
+          </div>
+
+          <div>
+            <h2 class="text-4xl font-black text-accent">+1200</h2>
+
+            <p class="text-black/50">مشتری راضی</p>
+          </div>
+
+          <div>
+            <h2 class="text-4xl font-black text-accent">+5</h2>
+
+            <p class="text-black/50">سال تجربه</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+
+      <div class="relative">
+        <!-- background decoration -->
+
+        <div
+          class="absolute inset-0 rounded-[40px] bg-accent opacity-10 blur-3xl"
+        ></div>
+
+        <img
+          src="Images/herolanding.webp"
+          class="relative rounded-[40px] shadow-2xl transition duration-500 hover:scale-[1.02]"
+        />
+      </div>
+    </section>
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="mx-auto mt-28 max-w-7xl px-8">
+      <div class="mb-14 text-center">
+        <h2 class="text-5xl font-black">دسته بندی ها</h2>
+
+        <p class="mt-4 text-black/50">لباس مورد علاقه خود را پیدا کنید</p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="group cursor-pointer rounded-3xl bg-secondary p-10 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div class="mb-5 text-6xl">👕</div>
+
+          <h3 class="text-2xl font-bold">هودی</h3>
+        </div>
+
+        <div
+          class="group cursor-pointer rounded-3xl bg-secondary p-10 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div class="mb-5 text-6xl">👔</div>
+
+          <h3 class="text-2xl font-bold">تی شرت</h3>
+        </div>
+
+        <div
+          class="group cursor-pointer rounded-3xl bg-secondary p-10 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div class="mb-5 text-6xl">👖</div>
+
+          <h3 class="text-2xl font-bold">شلوار</h3>
+        </div>
+
+        <div
+          class="group cursor-pointer rounded-3xl bg-secondary p-10 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div class="mb-5 text-6xl">👟</div>
+
+          <h3 class="text-2xl font-bold">کفش</h3>
+        </div>
+      </div>
+    </section>
+    <section class="flex justify-center items-center flex-col">
+      <div class="grid grid-cols-2 mx-50 my-20 gap-30 rounded-md border-none">
+        <div class="overflow-hidden rounded-md shadow-lg">
+          <div
+            id="container"
+            class="h-80 flex items-center justify-center rounded-t-md bg-[#3d78d6] transition duration-300 ease-linear p-8"
+          >
+            <img
+              id="hoodieBox"
+              src="Images/bluehoodie.png"
+              class="max-h-72 w-auto object-contain transition duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div
+            class="bg-secondary rounded-b-md flex flex-col items-start gap-3 px-5 py-5"
+          >
+            <h3 class="text-2xl font-bold">هودی اورجینال</h3>
+
+            <p class="text-black/60">
+              پارچه دورس ضخیم، مناسب فصل پاییز و زمستان
+            </p>
+
+            <p class="text-accent text-xl font-bold">۲,۴۹۰,۰۰۰ تومان</p>
+
+            <div class="flex justify-center gap-8 py-4 items-center w-full">
+              <button
+                data-image="Images/bluehoodie.png"
+                data-color="#3d78d6"
+                class="color-btn w-10 h-10 rounded-full bg-[#3d78d6] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                data-image="Images/creamhoodie.png"
+                data-color="#e8d2c7"
+                class="color-btn w-10 h-10 rounded-full bg-[#e8d2c7] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                data-image="Images/greenhoodie.png"
+                data-color="#879074"
+                class="color-btn w-10 h-10 rounded-full bg-[#879074] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                data-image="Images/blackhoodie.png"
+                data-color="black"
+                class="color-btn w-10 h-10 rounded-full bg-black border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                data-image="Images/pinkhoodie.png"
+                data-color="#fcc3ca"
+                class="color-btn w-10 h-10 rounded-full bg-[#fcc3ca] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-md shadow-lg">
+          <div
+            id="container2"
+            class="h-80 flex items-center justify-center rounded-t-md bg-[#1b1f2b] transition duration-300 ease-linear p-8"
+          >
+            <img
+              id="tshirtBox"
+              src="Images/blueshirt.png"
+              class="max-h-72 w-auto object-contain transition duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div
+            class="bg-secondary rounded-b-md flex flex-col items-start gap-3 px-5 py-5"
+          >
+            <h3 class="text-2xl font-bold">تیشرت نخی</h3>
+
+            <p class="text-black/60">۱۰۰٪ پنبه، سبک و مناسب استفاده روزانه</p>
+
+            <p class="text-accent text-xl font-bold">۱,۳۹۰,۰۰۰ تومان</p>
+
+            <div class="flex justify-center gap-8 py-4 items-center w-full">
+              <button
+                id="btnChanger"
+                class="w-10 h-10 rounded-full bg-[#1b1f2b] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="btnChanger2"
+                class="w-10 h-10 rounded-full px-2 py-2 bg-[#d8c5b7] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="btnChanger3"
+                class="w-10 h-10 rounded-full bg-[#879074] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="btnChanger4"
+                class="w-10 h-10 rounded-full bg-[#5d5d5f] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="btnChanger5"
+                class="w-10 h-10 rounded-full bg-[#bfc0c5] border-2 border-white shadow hover:scale-110 transition"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <!-- Pants Card -->
+        <div class="overflow-hidden rounded-md shadow-lg">
+          <div
+            id="container3"
+            class="h-80 flex items-center justify-center rounded-t-md bg-blue-800 transition duration-300 ease-linear p-8"
+          >
+            <img
+              id="pantsBox"
+              src="Images/bluepants-removebg-preview.png"
+              class="max-h-64 w-auto object-contain transition duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div
+            class="bg-secondary rounded-b-md flex flex-col items-start gap-3 px-5 py-5"
+          >
+            <h3 class="text-2xl font-bold">شلوار جین</h3>
+
+            <p class="text-black/60">پارچه Premium Denim</p>
+
+            <p class="text-accent text-xl font-bold">۱,۷۹۰,۰۰۰ تومان</p>
+
+            <div class="flex justify-center items-center gap-8 w-full py-4">
+              <button
+                id="pants"
+                class="w-10 h-10 rounded-full bg-blue-800 border-2 border-white shadow cursor-pointer hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="pants2"
+                class="w-10 h-10 rounded-full bg-white border-2 border-gray-300 shadow cursor-pointer hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="pants3"
+                class="w-10 h-10 rounded-full bg-[#bfc0c5] border-2 border-white shadow cursor-pointer hover:scale-110 transition"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shoes Card -->
+        <div class="overflow-hidden rounded-md shadow-lg">
+          <div
+            id="container4"
+            class="h-80 flex items-center justify-center rounded-t-md bg-white transition duration-300 ease-linear p-8"
+          >
+            <img
+              id="shoeBox"
+              src="Images/whiteshoes-removebg-preview.png"
+              class="w-50 transition duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div
+            class="bg-secondary rounded-b-md flex flex-col items-start gap-3 px-5 py-5"
+          >
+            <h3 class="text-2xl font-bold">کفش اسپرت</h3>
+
+            <p class="text-black/60">مناسب استفاده روزانه</p>
+
+            <p class="text-accent text-xl font-bold">۲,۱۵۰,۰۰۰ تومان</p>
+
+            <div class="flex justify-center items-center gap-8 w-full py-4">
+              <button
+                id="shoes"
+                class="w-10 h-10 rounded-full bg-white border-2 border-gray-300 shadow cursor-pointer hover:scale-110 transition"
+              ></button>
+
+              <button
+                id="shoes2"
+                class="w-10 h-10 rounded-full bg-accent border-2 border-white shadow cursor-pointer hover:scale-110 transition"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-secondary border-t border-black/10 mt-32">
+      <div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-4 gap-14">
+        <!-- Brand -->
+        <div class="space-y-5">
+          <h2 class="text-3xl font-bold text-accent">بوتیک نیلا</h2>
+
+          <p class="text-black/60 leading-8">
+            ارائه انواع پوشاک زنانه و مردانه با بهترین کیفیت و جدیدترین مدل‌ها.
+            هدف ما ایجاد تجربه‌ای لذت‌بخش از خرید آنلاین برای شماست.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-6">دسترسی سریع</h3>
+
+          <ul class="space-y-4 text-black/70">
+            <li><a href="#" class="hover:text-accent transition">خانه</a></li>
+            <li>
+              <a href="#" class="hover:text-accent transition">محصولات</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent transition">دسته بندی‌ها</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent transition">درباره ما</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-xl font-bold mb-6">ارتباط با ما</h3>
+
+          <div class="space-y-4 text-black/70">
+            <p>📍 تهران، ایران</p>
+            <p>📞 ۰۹۱۲۳۴۵۶۷۸۹</p>
+            <p>✉️ info@nila.ir</p>
+            <p>🕘 همه روزه ۹ تا ۲۲</p>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-xl font-bold mb-6">خبرنامه</h3>
+
+          <p class="text-black/60 mb-5">
+            برای اطلاع از جدیدترین محصولات ایمیل خود را وارد کنید.
+          </p>
+
+          <div class="flex flex-col gap-3">
+            <input
+              type="email"
+              placeholder="ایمیل شما"
+              class="bg-white rounded-md px-4 py-3 outline-none border border-black/10 focus:border-accent transition"
+            />
+
+            <button
+              class="bg-accent text-white font-bold rounded-md py-3 hover:opacity-90 transition cursor-pointer"
+            >
+              عضویت
+            </button>
+          </div>
+        </div>
+      </div>
+      <a href="https://google.com">dadfadf</a>
+
+      <div class="border-t border-black/10 py-6 text-center">
+        <p class="text-black/50">© ۲۰۲۶ بوتیک نیلا | تمامی حقوق محفوظ است.</p>
+      </div>
+    </footer>
+    <script>
+      // Typewriter Effects //
+
+      const text = "بوتیک نیلا";
+      const element = document.getElementById("typewriter");
+
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          element.textContent += text[i];
+          i++;
+          setTimeout(typeWriter, 150);
+        }
+      }
+
+      const text2 =
+        "بوتیک نیلا با هدف ارائه پوشاک و اکسسوری‌های شیک، باکیفیت و به‌روز فعالیت خود را آغاز کرده است. ما باور داریم که زیبایی در سادگی و کیفیت نهفته است؛ به همین دلیل تلاش می‌کنیم مجموعه‌ای از محصولات را با دقت و سلیقه انتخاب کنیم تا پاسخگوی نیاز و سبک هر سلیقه‌ای باشند. رضایت مشتری، کیفیت محصولات و تجربه‌ای لذت‌بخش از خرید، ارزش‌های اصلی بوتیک نیلا هستند و همواره می‌کوشیم با ارائه بهترین خدمات، همراهی مطمئن برای انتخاب‌های شما باشیم.";
+
+      const element2 = document.getElementById("typewriter2");
+
+      let index = 0;
+
+      function typeWriter2() {
+        if (index < text2.length) {
+          element2.textContent += text2[index];
+          index++;
+          setTimeout(typeWriter2, 50);
+        }
+      }
+
+      console.log(element2);
+      document.addEventListener("DOMContentLoaded", () => {
+        typeWriter();
+        typeWriter2();
+      });
+
+      // Colors Section //
+
+      const hoodieBox = document.getElementById("hoodieBox");
+      const container = document.getElementById("container");
+
+      document.querySelectorAll(".color-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          hoodieBox.src = button.dataset.image;
+          container.style.backgroundColor = button.dataset.color;
+        });
+      });
+
+      const shirtBox = document.getElementById("tshirtBox");
+      const container2 = document.getElementById("container2");
+
+      const shirts = [
+        {
+          button: "btnChanger",
+          image: "Images/blueshirt.png",
+          color: "#1b1f2b",
+        },
+        {
+          button: "btnChanger2",
+          image: "Images/creamshirt.png",
+          color: "#d8c5b7",
+        },
+        {
+          button: "btnChanger3",
+          image: "Images/greenshirt.png",
+          color: "#879074",
+        },
+        {
+          button: "btnChanger4",
+          image: "Images/greyshirt.png",
+          color: "#5d5d5f",
+        },
+        {
+          button: "btnChanger5",
+          image: "Images/whiteshirt.png",
+          color: "#bfc0c5",
+        },
+      ];
+
+      shirts.forEach(({ button, image, color }) => {
+        document.getElementById(button).addEventListener("click", () => {
+          shirtBox.src = image;
+          container2.style.backgroundColor = color;
+        });
+      });
+
+      const pantsBox = document.getElementById("pantsBox");
+      const container3 = document.getElementById("container3");
+
+      const pants = [
+        {
+          button: "pants",
+          image: "Images/bluepants-removebg-preview.png",
+          color: "#1e40af ",
+        },
+        {
+          button: "pants2",
+          image: "Images/whitepants.webp",
+          color: "white ",
+        },
+        {
+          button: "pants3",
+          image: "Images/greypants.png",
+          color: "#bfc0c5",
+        },
+      ];
+
+      pants.forEach(({ button, image, color }) => {
+        document.getElementById(button).addEventListener("click", () => {
+          pantsBox.src = image;
+          container3.style.backgroundColor = color;
+        });
+      });
+
+      const shoesBox = document.getElementById("shoeBox");
+      const container4 = document.getElementById("container4");
+
+      const shoes = [
+        {
+          button: "shoes",
+          image: "Images/whiteshoes-removebg-preview.png",
+          color: "white",
+        },
+        {
+          button: "shoes2",
+          image: "Images/maroon.png",
+          color: "#460515",
+        },
+      ];
+
+      shoes.forEach(({ button, image, color }) => {
+        document.getElementById(button).addEventListener("click", () => {
+          shoesBox.src = image;
+          container4.style.backgroundColor = color;
+        });
+      });
+    </script>
+  </body>
+</html>
