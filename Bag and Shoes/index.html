@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="relative h-screen overflow-hidden">
+      <!-- Images -->
+      <div class="flex h-full relative">
+        <div class="w-1/2">
+          <img
+            src="Images/IMG_20260629_194428_575.jpg"
+            class="w-full h-[55rem]"
+            alt=""
+          />
+        </div>
+
+        <div class="w-1/2">
+          <img
+            src="Images/IMG_20260629_194428_168.jpg"
+            class="w-full h-full"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Black gradient overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80"
+      ></div>
+
+      <!-- Navbar -->
+      <nav
+        class="absolute top-0 left-0 z-20 w-full flex justify-between items-center px-10 py-6"
+      >
+        <div class="flex gap-6 text-white font-medium">
+          <a href="#">کفش</a>
+          <a href="#">کیف</a>
+          <a href="#">اکسسوری</a>
+          <a href="#">سبد</a>
+        </div>
+
+        <img
+          src="Images/LOGO_NL_SIN_FONDO_-_TIPOGRAFIA_BLANCA_2.webp"
+          class="h-12"
+          alt=""
+        />
+
+        <div class="flex gap-6 text-white font-medium">
+          <a href="#">حساب کاربری</a>
+          <a href="#">جست و جو</a>
+        </div>
+      </nav>
+
+      <!-- Bottom text -->
+      <div
+        class="absolute bottom-16 left-1/2 -translate-x-1/2 text-center text-white z-20"
+      >
+        <h2 class="text-6xl font-bold mb-4">کیفیت بی‌نظیر</h2>
+        <p class="text-2xl mb-8">آفرهای ویژه تابستان</p>
+
+        <button
+          class="px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition duration-300"
+        >
+          مشاهده محصولات
+        </button>
+      </div>
+    </header>
+    <section>
+      <div class="grid grid-cols-5 m-0">
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/flipnotblanca04.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span> کفش فلیپو بلانکو مدل 21</span>
+            <span>13,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/flipnotnegra04.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کفش فلیپو بلانکو</span>
+            <span>8,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/IMG_0604.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کفش بلانکو</span>
+            <span>11,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/IMG_5727_1.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کفش فلیپو نگرا</span>
+            <span>9,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/IMG_5728_1.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کفش فلیپو بلانکو</span>
+            <span>12,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <img src="Images/secondhero.jpg" class="w-full" alt="" />
+      </div>
+      <div class="grid grid-cols-4 m-0">
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/IMG_4248_1.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span> کیف فلیپو بلانکو مدل 21</span>
+            <span>14,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/IMG_9877.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کیف فلیپو بلانکو</span>
+            <span>12,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/RuchiBag.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کیف روچی</span>
+            <span>11,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+        <div
+          class="product-card relative bg-linear-to-t border-r-1 border-slate-500 h-114"
+        >
+          <img src="Images/Ruchibag01.webp" alt="" />
+          <p class="absolute top-3 inset-x-3 flex justify-between items-center">
+            <span>کیف روچی</span>
+            <span>11,000</span>
+          </p>
+          <button
+            class="add-btn bg-slate-950/20 backdrop-blur-md text-white px-3 py-1.5 rounded-lg border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300 absolute bottom-5 opacity-0 left-1/4 z-20"
+          >
+            اضافه به سبد خرید
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-black text-white mt-24">
+      <!-- Top -->
+      <div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-4 gap-12">
+        <!-- Brand -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">بوتیک نیلا</h2>
+          <p class="text-gray-400 leading-8">
+            بوتیک نیلا مجموعه‌ای از کیف، کفش و اکسسوری‌های خاص را با تمرکز بر
+            کیفیت، طراحی مدرن و تجربه‌ای متفاوت از خرید ارائه می‌دهد.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-5">دسترسی سریع</h3>
+
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">خانه</a></li>
+            <li><a href="#" class="hover:text-white transition">محصولات</a></li>
+            <li>
+              <a href="#" class="hover:text-white transition">درباره ما</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">تماس با ما</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-xl font-semibold mb-5">ارتباط با ما</h3>
+
+          <ul class="space-y-3 text-gray-400">
+            <li>📍 تهران، ایران</li>
+            <li>📞 021-12345678</li>
+            <li>✉️ info@nilaboutique.ir</li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-xl font-semibold mb-5">خبرنامه</h3>
+
+          <p class="text-gray-400 mb-4">
+            از جدیدترین محصولات و تخفیف‌ها باخبر شوید.
+          </p>
+
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="ایمیل شما"
+              class="bg-white/10 border border-white/20 rounded-r-lg px-4 py-3 outline-none w-full"
+            />
+
+            <button
+              class="bg-white text-black px-5 rounded-l-lg hover:bg-gray-200 transition"
+            >
+              ثبت
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-white/10"></div>
+
+      <!-- Bottom -->
+      <div
+        class="max-w-7xl mx-auto px-10 py-6 flex justify-between items-center text-gray-500 text-sm"
+      >
+        <p>© 2026 تمامی حقوق برای بوتیک نیلا محفوظ است.</p>
+
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition">Instagram</a>
+          <a href="#" class="hover:text-white transition">Telegram</a>
+          <a href="#" class="hover:text-white transition">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const cards = document.querySelectorAll(".product-card");
+
+      cards.forEach((card) => {
+        const button = card.querySelector(".add-btn");
+
+        card.addEventListener("mouseenter", () => {
+          button.classList.remove("opacity-0", "pointer-events-none");
+          button.classList.add("opacity-100");
+        });
+
+        card.addEventListener("mouseleave", () => {
+          button.classList.remove("opacity-100");
+          button.classList.add("opacity-0", "pointer-events-none");
+        });
+      });
+    </script>
+  </body>
+</html>
